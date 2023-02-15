@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">itProgerApp</string>
-    <string name="calculator_logo">Calculator</string>
     <string name="hint_1">Enter your first number</string>
     <string name="hint_2">Enter your second number</string>
     <string name="calculate_button">Calculate</string>

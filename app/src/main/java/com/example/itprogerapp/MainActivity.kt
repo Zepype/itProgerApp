@@ -1,7 +1,9 @@
 package com.example.itprogerapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -18,9 +20,8 @@ class MainActivity : AppCompatActivity() {
         val logoRes = findViewById<TextView>(R.id.calculator)
         val firstNum = findViewById<EditText>(R.id.hint_text_first)
         val secondNum = findViewById<EditText>(R.id.hint_text_second)
-        val calculateButton = findViewById<Button>(R.id.button_calculate)
 
-        calculateButton.setOnClickListener {
+        val calculateButton = findViewById<Button>(R.id.button_calculate).setOnClickListener {
             val numFirst = firstNum.text.toString().toFloat()
             val numSec = secondNum.text.toString().toFloat()
             val res = numFirst + numSec
@@ -28,7 +29,11 @@ class MainActivity : AppCompatActivity() {
             val toast = Toast.makeText(this, "You did your operation", Toast.LENGTH_LONG).show()
             alertDialog()
         }
+
+        val nextPageButton = findViewById<Button>(R.id.button_next_page).setOnClickListener { showNextPage() }
+
     }
+
     private fun alertDialog(text:String = "Ну ты программист, конечно"){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
@@ -42,7 +47,11 @@ class MainActivity : AppCompatActivity() {
                 }
         val dialog = builder.create()
                             .show()
+    }
 
+    private fun showNextPage() {
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
 
     }
 
