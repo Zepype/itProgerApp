@@ -5,4 +5,7 @@
     <string name="calculate_button">Calculate</string>
     <string name="next_page_button">Next page</string>
     <string name="go_back">Go back</string>
+    <string name="rating_bar_is_here">Rating bar is here</string>
+    <string name="fragment_2">Fragment 2</string>
+    <string name="fragment_1">Fragment 1</string>
 </resources>
